@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>KinematiX 101</h1>
+    </div>
+
+    <h2>"In your hand lies the power of speed."</h2>
+    <div class="block-items">
+        
+        <div class="main-item">
+            <h3 id="equation">
+                s = s<sub>0</sub> + ut + 1/2at<sup>2</sup>
+            </h3>
+            
+            <div class="container-col">
+                <p style="text-align: center;">What are your max speed bro?</p>
+                <div class="panel-grid-container">
+                        <p for="position">position</p>
+                        <button class="minus">-</button>
+                        <input id="position" type="range" name="position" min="0" max="100" value="0">
+                        <button class="plus">+</button>
+                        <p>meter</p>
+
+                        <p for="velocity">velocity</p>
+                        <button class="minus">-</button>
+                        <input id="velocity" type="range" name="velocity" min="0" max="120" value="0">
+                        <button class="plus">+</button>
+                        <p>m/s</p>
+
+                        <p for="acceleration">acceleration</p>
+                        <button class="minus">-</button>
+                        <input id="acceleration" type="range" name="acceleration" min="0" max="10" value="0">
+                        <button class="plus">+</button>
+                        <p>m/s^2</p>
+
+                        <p for="time">time</p>
+                        <button class="minus">-</button>
+                        <input id="time" type="range" name="time" min="0" max="100" value="0">
+                        <button class="plus">+</button>
+                        <p>sec</p>
+                </div>
+
+                <div class="container-row">
+                    <p style="color: #A0222B; float: left;">
+                        unlock your seat belt before going: change to see distance graph
+                    </p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="container-col">
+                <div style="height: 60px;"></div>
+
+                <div style="position: absolute; left: 290px; top: 566px; z-index: -1;">
+                    <canvas id="graph" width="610" height="300"><hr></canvas>
+                </div>
+                <div id="rideCar" class="container-col">
+                    <img src="images/Aj/AjAtiwong.svg" alt="" height="60px">
+                    <img src="images/carEDIT/Car10@4x.png" alt="" height="40px" class="flipped" id="car">
+                </div>
+                <div id="colored-line"></div>
+                <div style="height: 10px;"></div>
+                <h3 id="graph-calculation">v = {u} + {a}t<sup></sup></h3>
+                <div class="container-row" id="AjPic">
+                    <button class="button-control"><img src="images/AjWithBG/Warisa.svg" alt="Warisa"></button>
+                    <button class="button-control"><img src="images/AjWithBG/Kiang.svg" alt="Kiang"></button>
+                    <button class="button-control"><img src="images/AjWithBG/Somchai.svg" alt="Somchai"></button>
+                    <button class="button-control"><img src="images/AjWithBG/Atiwong.svg" alt="Atiwong"></button>
+                    <button class="button-control"><img src="images/AjWithBG/Nattee.svg" alt="Nattee"></button>
+                    <button class="button-control"><img src="images/AjWithBG/Tong.svg" alt="Tong"></button>
+                    <button class="button-control"><img src="images/AjWithBG/Natawut.svg" alt="Natawut"></button>
+                    <button class="button-control"><img src="images/AjWithBG/Proadpran.svg" alt="Proadpran"></button>
+                </div>
+                <div class="container-row" style="width: 40%;">
+                    <button class="button-control"><img src="images/left.png"  alt="left"></button>
+                    <button class="button-control" id="move-button"><img src="images/pilot1.png" alt="pilot"></button>
+                    <button class="button-control"><img src="images/right.png" alt="right"></button>
+                    <button class="button-control" id="reset"><img src="images/reset.png" alt="reset"></button>
+                    <button class="button-control" id="changeCar"><img src="images/changeCar.png" alt="change car"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
