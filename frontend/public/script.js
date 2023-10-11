@@ -145,14 +145,12 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.moveTo(x_pos,20);
         ctx.lineTo(x_pos,y_pos + 20);
         ctx.stroke();
-
-
-
         // ctx.strokeText('t', x_end + 5, y_pos);
-        ctx.strokeText('x', x_pos, 15);
+        
 
         if (check) {
             // Draw the curve based on the physics parameters
+            ctx.strokeText('s', x_pos, 15);
             ctx.beginPath();
             ctx.arc(x_pos, y_pos-distance, 7, 0, Math.PI * 2, true);
             ctx.moveTo(x_pos,y_pos - distance);
@@ -166,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.lineWidth = 3;
             ctx.stroke();
         } else {
+            ctx.strokeText('v', x_pos, 15);
             ctx.beginPath();
             ctx.arc(x_pos, y_pos - velocity, 7, 0, Math.PI * 2, true);
             ctx.moveTo(x_pos,y_pos - velocity);
@@ -198,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial draw
     drawGraph();
 
+    // arc animation when click move button
     document.querySelector('#move-button').addEventListener('click', () => {
         const time = slide_t.value;
         const velocity = slide_v.value;
@@ -209,6 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let count = 0;
         ctx.font = "15px 'Mitr', sans-serif";
         if (check) {
+            ctx.strokeText('s', x_pos, 15);
             ctx.beginPath();
             ctx.moveTo(x_pos,y_pos - distance);
             const drawInterval = setInterval(() => {  
@@ -228,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 count++;
             }, 20);
         } else {
+            ctx.strokeText('v', x_pos, 15);
             ctx.beginPath();
             ctx.moveTo(x_pos,y_pos - velocity);
             const drawInterval = setInterval(() => {  

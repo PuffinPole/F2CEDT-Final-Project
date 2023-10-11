@@ -79,7 +79,7 @@ sub {
     align-items: center;
     height: 1000px;
     width: auto;
-    margin: 20px;
+    margin: 20px auto;
     max-width: 1200px;
 }
 
@@ -112,7 +112,6 @@ sub {
     margin: 0px;
     height: auto;
     width: 80%;
-
 }
 
 .main-item .container-col {
@@ -309,3 +308,49 @@ input:checked + .slider:before {
     position: relative;
     animation: fadeIn 1s;
 }
+
+.container-col-buttom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.container-col form {
+    margin-bottom: 10px; /* Optional, adds some space between form and table */
+}
+
+
+table {
+    width: 100%;
+    margin: 20px 20%;
+    border-spacing: 10px; /* Adjust the value to set the desired distance between columns */
+}
+
+table thead tr th{
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+}
+
+table tbody tr td{
+    padding: 5px;
+    text-align: center;
+}
+
+/* input box */
+.input-container {
+    position: relative;
+    width: 200px;
+    margin: auto;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* input box */

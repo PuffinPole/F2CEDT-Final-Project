@@ -24,6 +24,11 @@ const itemSchema = new mongoose.Schema(
 
         name:{
             type: String,
+            default: 'Anonymous',
+        },
+        
+        position:{
+            type: Number,
             required: true,
         }
     }

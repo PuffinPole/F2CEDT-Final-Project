@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en th">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,7 @@
             </h3>
             
             <div class="container-col">
-                <p style="text-align: center;">What are your max speed bro?</p>
+                <p style="text-align: center;">What is your max speed bro?</p>
                 <div class="panel-grid-container">
                         <p for="position">position</p>
                         <button class="minus">-</button>
@@ -66,7 +66,7 @@
             <div class="container-col">
                 <div style="height: 60px;"></div>
 
-                <div style="position: absolute; left: 290px; top: 566px; z-index: -1;">
+                <div style="position: absolute; left: 290px; top: 545px; z-index: -1;">
                     <canvas id="graph" width="610" height="300"><hr></canvas>
                 </div>
                 <div id="rideCar" class="container-col">
@@ -87,16 +87,43 @@
                     <button class="button-control"><img src="images/AjWithBG/Proadpran.svg" alt="Proadpran"></button>
                 </div>
                 <div class="container-row" style="width: 40%;">
-                    <button class="button-control"><img src="images/left.png"  alt="left"></button>
+                    <!-- <button class="button-control"><img src="images/left.png"  alt="left"></button> -->
                     <button class="button-control" id="move-button"><img src="images/pilot1.png" alt="pilot"></button>
-                    <button class="button-control"><img src="images/right.png" alt="right"></button>
+                    <!-- <button class="button-control"><img src="images/right.png" alt="right"></button> -->
                     <button class="button-control" id="reset"><img src="images/reset.png" alt="reset"></button>
                     <button class="button-control" id="changeCar"><img src="images/changeCar.png" alt="change car"></button>
+                    <button class="button-control" id="save"><img src="images/saveIcon.png" alt="saveIcon"></button>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="container-col-bottom" style="width: 40%; height: 50px;">
+            <div class="container-row">
+                <p>Name: </p>
+                
+                    <div class="input-container">
+                        <input type="text">
+                    </div>
+                
+            </div>
+        </div>
+
+        <table id="table">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 14%;">Position</th>
+                    <th style="width: 14%;">Velocity</th>
+                    <th style="width: 14%;">Acceleration</th>
+                    <th style="width: 14%;">Time</th>
+                    <th style="width: 14%;">Distance</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
+    <script type="module" src="collection.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /**
  * @typedef {Object} Item
- * @property {number} _id
+ * @property {string} _id
  * @property {number} distance
  * @property {number} velocity
  * @property {string} name
